@@ -1,0 +1,535 @@
+<!-- Elemento raíz -->
+<!DOCTYPE html>
+<html>
+
+<!-- Metadatos del documento -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <base href="https://www.etiquetashtml.es" /> -->
+	<meta name="rights" content="Copyright 2022 FemCoders" />
+	<meta name="author" content="FemCoders" />
+	<meta name="description" content="En esta web conocerás las principales etiquetas html y su semántica." />
+
+	<title>Etiquetas HTML</title>
+
+	<!-- Icono de la página -->
+	<link href="img/favicon.png" rel="shortcut icon" type="image" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			color: #333;
+			font-size: 16px;
+			font-family: 'Quicksand', sans-serif;
+			background-image: url(https://wallpapercave.com/wp/wp4285370.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: 0 100px;
+			height: 100vh;
+			width: 100vw;
+			position: relative;
+			overflow-x: hidden;
+		}
+		main {
+		    display: block;
+		    position: relative;
+		    width: 70%;
+		    right: 5%;
+		    top: 5%;
+		    height: 75%;
+		    padding: 35px;
+		    overflow: auto;
+		    left: 25%;
+		    padding-top: 55px;
+		}
+		main::-webkit-scrollbar {
+		  width: 12px;
+		}
+		main::-webkit-scrollbar-track {
+		  border-radius: 10px;
+		  background: rgb(51 51 51 / 30%);
+		}
+		 
+		main::-webkit-scrollbar-thumb {
+		  background: #d800ff;
+		  border-radius: 10px;
+		}
+		main h1 {
+			margin: 0;
+			position: fixed;
+			text-align: center;
+			width: 70%;
+			right: 7%;
+			top: 5%;
+			background: #FFF;
+			text-shadow: 0 0 5px rgb(216 0 255 / 50%);
+			padding-bottom: 10px;
+		}
+		main section h2 {
+		    margin-top: 0;
+		}
+		main section {
+		    background: #FFF;
+		    border-radius: 20px;
+		    padding: 30px;
+		    box-shadow: 1px 0 9px 3px rgb(216 0 255 / 25%);
+		    margin-bottom: 25px;
+		}
+		code {
+		    color: #d800ff;
+		}
+		img {
+		    border-style: none;
+		    max-width: 100%;
+		    border-radius: 5px;
+		}
+		blockquote {
+		    font-size: 17px;
+		    font-style: italic;
+		    font-weight: 600;
+		    max-width: 85%;
+		    margin: 5% auto;
+		}
+		header {
+		    position: fixed;
+		    left: 0;
+		    top: 50%;
+		    transform: translate(0, -120%);
+		    width: 25%;
+		}
+		header {
+			position: fixed;
+			left: 0;
+			top: 35%;
+			transform: translate(0, -50%);
+			width: 23%;
+		}
+
+		header nav {
+		    background: #FFF;
+		    border-radius: 0 20px 20px 0;
+		    padding: 35px;
+		    box-shadow: 1px 0 9px 3px rgb(216 0 255 / 25%);
+		}
+
+		header nav ul {
+		    padding: 0;
+		    margin: 0;
+		    padding-left: 17px;
+		}
+
+		header nav ul li {
+		    line-height: 25px;
+		}
+
+		header nav ul li a:hover,
+		header nav ul li a.active {
+		    color: #d800ff;
+		    font-weight: bold;
+		}
+
+		header nav ul li a {
+		    text-decoration: none;
+		    color: initial;
+		    font-size: 16px;
+		    transition: all .3s ease;
+		}
+		header nav ul li::marker {
+		    color: #d800ff;
+		}
+		footer p {
+		    font-size: 18px;
+		    font-weight: 600;
+		}
+
+		footer {
+		    position: absolute;
+		    width: 100%;
+		    bottom: 0;
+		    left: 0;
+		    text-align: center;
+		}
+        table {
+            border: 1px solid #d800ff;
+            border-collapse: collapse;
+            margin: 0 auto;
+            padding: 0px;
+            table-layout: fixed;
+            min-width: 80%;
+        }
+
+        table th {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #fff;
+            background: #d800ff;
+            color: #FFFFFF;
+            font-weight: bold;
+            text-align: center
+        }
+
+        table td {
+            padding: 5px;
+            border: 1px solid #d800ff;
+        }
+
+        table tr {
+            background-color: #FFF;
+            color: #d800ff;
+            text-align: center;
+        }
+        fieldset {
+		    border-color: #d800ff;
+		    border-radius: 8px;
+		    margin: 15px;
+		}
+
+		fieldset legend {
+		    color: #d800ff;
+		    padding: 0 10px;
+		    font-weight: bold;
+		}
+
+		fieldset .input-group {
+		    display: block;
+		    margin: 15px 0;
+		}
+
+		fieldset .input-group label {
+		    display: block;
+		    margin-bottom: 5px;
+		}
+
+		fieldset .input-group input,
+		fieldset .input-group select {
+		    padding: 9px;
+		    width: 100%;
+		    border-radius: 5px;
+		    border: 1px solid rgb(51 51 51 / 50%);
+		    color: #d800ff;
+		    outline: none;
+		}
+		form {
+		    width: 60%;
+		    margin: 0 auto;
+		    border: 1px solid #d800ff;
+		    padding: 25px;
+		    border-radius: 15px;
+		    margin-top: 25px;
+		}
+
+		form h3 {
+		    margin-top: 0;
+		    text-align: center;
+		    font-size: 22px;
+		}
+		form button {
+		    background: #FFF;
+		    border: 2px solid #D800FF;
+		    padding: 10px;
+		    border-radius: 8px;
+		    margin: 0 auto;
+		    display: block;
+		    color: #d800ff;
+		    font-weight: 600;
+		    transition: all .3s ease;
+		    cursor: pointer;
+		}
+
+		form button:hover {
+		    background: #d800ff;
+		    border-color: #d800ff;
+		    color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<!-- Menú -->
+	<header>
+		<nav>
+			<ul>
+				<li><a class="opcion-menu" id="irRaiz" href="#raiz">Elementos raíz</a></li>
+				<li><a class="opcion-menu" id="irMeta" href="#metadatos">Metadatos del documento</a></li>
+				<li><a class="opcion-menu" id="irSection" href="#section">Secciones</a></li>
+				<li><a class="opcion-menu" id="irAgrupar" href="#agrupar">Agrupación de Contenido</a></li>
+				<li><a class="opcion-menu" id="irSemantica" href="#semantica">Semántica a nivel de texto</a></li>
+				<li><a class="opcion-menu" id="irIncrustado" href="#incrustado">Contenido incrustado</a></li>
+				<li><a class="opcion-menu" id="irTablas" href="#tablas">Tablas</a></li>
+				<li><a class="opcion-menu" id="irFormularios" href="#formularios">Formularios</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Cuerpo de la página -->
+	<main>
+		<h1>Etiquetas HTML</h1>
+		<section id="raiz">
+			<h2>Elementos raíz</h2>
+			<div>
+				<p>Las etiquetas <code>&lt;!doctype html&gt;</code> y <code>&lt;html&gt;</code> se ubican al inicio de nuestra página web e indican que el documento está bajo el estandar HTML5 y le indican al explorador que lo que viene a continuación debe ser interpretado como código HTML.</p>
+
+				<img src="img/elementos_raiz.png" alt="Elementos raíz">
+			</div>
+		</section>
+		<section id="metadatos">
+			<h2>Metadatos del documento</h2>
+			<div>
+				<p>Estas etiquetas se ubican en la abecera del documento HTML. Representa una colección de metadatos acerca del documento, incluyendo enlaces, hojas de estilo titulo del documento e información relacionada.</p>
+
+				<p>Las podemos ver como: <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code> entre otras.</p>
+				<img src="img/metadatos.png" alt="Metadatos del Documento">
+			</div>
+		</section>
+		<section id="section">
+			<h2><code>&lt;h2&gt;</code>Secciones<code>&lt;/h2&gt;</code></h2>
+			<div>
+				<p>Son las etiquetas que encontramos en el <code>&lt;body&gt;</code> de la página (<i>Sí, el body también es una etiqueta de sección</i> &#128521;), estas pueden ser: <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code> entre otras.</p>
+				<img src="img/seccion.png" alt="Secciones">
+			</div>
+		</section>
+		<section id="agrupar">
+			<h2>Agrupación de Contenido</h2>
+			<div>
+				<p><code>&lt;p&gt;</code>Como su nombre lo indica, estas etiquetas agrupan el contenido en diferentes formatos que podemos usar según el contexto de lo que queremos indicar. <i>Por ejemplo este párrafo</i> &#128521;!<code>&lt;/p&gt;</code></p>
+
+				<p>Podemos utilizar la etiqueta <code>&lt;hr&gt;</code> para incluir una separación entre parrafos o secciones &#8595;</p>
+				<hr>
+
+				<blockquote><code>&lt;blockquote&gt;</code>Esta etiqueta podemos usarla cuando queremos citar un contenido de otra fuente y podemos darle estilos diferentes al resto del contenido.<code>&lt;/blockquote&gt;</code></blockquote>
+
+				<p>Si por otro lado queremos mostrar información en forma de listas, podemos utilizar las etiquetas <code>&lt;ul&gt;</code> para listas desordenadas (<span style="color: #d800ff;font-weight: 600;">U</span>nordered <span style="color: #d800ff;font-weight: 600;">L</span>ist) y/o la etiqueta <code>&lt;ol&gt;</code> para listas ordenadas (<span style="color: #d800ff;font-weight: 600;">O</span>rdered <span style="color: #d800ff;font-weight: 600;">L</span>ist). Para definir los elementos de estas listas, cada elemento se deberá agregar dentro de la etiqueta <code>&lt;li&gt;</code> de la siguiente manera:</p>
+
+				<img src="img/listas.png" alt="Listas">
+
+				<p>Y asi es como se muestran:</p>
+
+				<ul>
+					<li>Esta es</li>
+					<li>una lista</li>
+					<li>desordenada &#128543;!</li>
+				</ul>
+				<ol>
+					<li>Esta es</li>
+					<li>una lista</li>
+					<li>Ordenada &#129321;!</li>
+				</ol>
+			</div>
+		</section>
+		<section id="semantica">
+			<h2>Semántica a nivel de texto</h2>
+			<div>
+				<p>Estas etiquetas nos permiten destacar elementos de texto dentro de un mismo párrafo,
+					podemos utilizar la etiqueta <code>&lt;strong&gt;</code><strong>para destacar</strong><code>&lt;/strong&gt;</code> alguna palabra o frase. Podemos agregar referencias <code>&lt;sub&gt;</code><sub>(1)</sub><code>&lt;/sub&gt;</code> en el texto y luego explicarlas <code>&lt;sup&gt;</code><sup>(2)</sup><code>&lt;/sup&gt;</code> en otro apartado utilizando la etiqueta <code>&lt;small&gt;</code>, por ejemplo:</p>
+
+				<small><code>&lt;small&gt;</code>(1)Esto es una referencia y (2)Esto también.<code>&lt;/small&gt;</code></small>
+				<p>Para agregar un espacio entre un párrafo y otro (Como cuando usamos <i>enter</i> en un documento de word) utilizamos la etiqueta <code>&lt;br&gt;</code></p>
+				<br>
+				<p>El espacio entre el párrafo anterior y este es más amplio. Si queremos <span style="color: #FFF;background: #d800ff;">destacar alguna palabra o frase</span> en el texto pero de otra forma que no sea en <code>&lt;i&gt;</code><i>italic</i><code>&lt;/i&gt;</code> o <code>&lt;strong&gt;</code><strong>strong</strong><code>&lt;/strong&gt;</code>, podemos utilizar la etiqueta <code>&lt;span&gt;</code> y combinarla con atributos que nos permitirán mostrar el contenido de forma diferente al resto del texto.</p>
+
+				<img src="img/span.png" alt="span">
+			</div>
+		</section>
+		<section id="incrustado">
+			<h2>Contenido incrustado</h2>
+			<div>
+				<p>Como su nombre lo indica, son etiquetas que nos permiten incrustar elementos en diferentes formatos como <strong>audio</strong>, <strong>videos</strong> (con un reproductor de video nativo de HTML), <strong>videos de plataformas</strong> como youtube, vimeo, etc, audio, <strong>imágenes</strong> en formatos convencionales como <code>.jpg</code> <code>.jpeg</code> <code>.png</code> o en formato <code>SVG</code>, entre los más usados.</p>
+				<br>
+				<h3>Videos</h3>
+				<p>En este apartado utilizaremos las etiquetas <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code> e <code>&lt;iframe&gt;</code> con algunos atributos.</p>
+
+				<img src="img/tag_video.png" alt="Tag Video">
+				<br>
+				<video width="400" controls>
+				  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+				  <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+				  Your browser does not support HTML video.
+				</video>
+				<br>
+				<br>
+				<img src="img/tag_iframe.png" alt="Tag iframe">
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/fD-0bt9gAYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<hr>
+				<br>
+				<h3>Audio</h3>
+				<p>En este apartado utilizaremos las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;source&gt;</code> con algunos atributos.</p>
+
+				<img src="img/tag_audio.png" alt="Tag Audio">
+				<br>
+				<audio controls>
+				  <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+				  <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+
+				<hr>
+				<br>
+				<h3>Imágenes</h3>
+				<p>En este apartado utilizaremos las etiquetas <code>&lt;img&gt;</code> y <code>&lt;svg&gt;</code> con algunos atributos.</p>
+
+				<img src="img/tag_svg.png" alt="Tag SVG"> <!-- Asi muestro esta imagen que estas viendo =D -->
+				<br>
+				<svg width="100" height="100">
+				  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+				</svg>
+			</div>
+		</section>
+		<section id="tablas">
+			<h2>Tablas</h2>
+			<div>
+				<p>Si has utilizado alguna vez las tablas de excel, pues esto es lo mismo pero con código html &#128517;!</p>
+				<p>Para crear una tabla se utiliza la etiqueta <code>&lt;table&gt;</code>, pero esta es solo la etiqueta principal, dentro de ella se podrá crear una cabecera, filas, columnas, celdas, celdas combinadas horizontal y/o verticalmente con etiquetas como: <code>&lt;thead&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> y debe respetar la siguiente estructura:</p>
+
+				<img src="img/tablas.png" alt="Tablas">
+
+				<small>Estas son las etiquetas principales.</small>
+
+				<p>Si lo has intentado y lo has hecho bien, tu tabla deberia verse asi:</p>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Cabecera 1</th>
+							<th>Cabecera 2</th>
+							<th>Cabecera 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Fila 1, Col 1</td>
+							<td>Fila 1, Col 2</td>
+							<td>Fila 1, Col 3</td>
+						</tr>
+						<tr>
+							<!-- Utilizamos el atributo "rowspan='2'" para indicar que se combinan dos filas (celdas verticalmente), 
+							en la misma columna con el atributo "colspan='1'" -->
+							<td rowspan='2' colspan='1' >Filas 2 y 3, Col 1</td>
+							<td>Fila 2, Col 2</td>
+							<td>Fila 2, Col 3</td>
+						</tr>
+						<tr>
+							<!-- En la siguiente fila se resta la celda (td) combinada en la fila anterior (tr) -->
+							<td>Fila 3, Col 2</td>
+							<td>Fila 3, Col 3</td>
+						</tr>
+						<tr>
+							<td>Fila 4, Col 1</td>
+							<td rowspan='1' colspan='2' >Fila 4, Col 2 y 3</td>
+							<!-- Utilizamos el atributo "rowspan='1'" para indicar que se mantiene la fila (tr) pero se 
+							combinan dos columnas (td) "colspan='2'"-->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<section id="formularios">
+			<h2>Formularios</h2>
+			<div>
+				<p>Tod@s sabemos que es un formulario, pero ¿Cuáles etiquetas debemos usar para crear uno con diferentes tipos de campos &#129300;?</p>
+				<p>La etiqueta principal es <code>&lt;form&gt;</code> y dentro de esta podemos utilizar diferentes etiquetas dependiedo del tipo de campo que quieras mostrar, veamos algunos de los más usados:</p>
+
+				<form action="" method="">
+					<h3>Esto es un formulario</h3>
+					<p>Aqui estamos utilizando las etiquetas <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> y algunos atributos.</p>
+					<fieldset>
+						<legend>Esto es un fieldset con "<i>inputs</i>"</legend>
+						<div class="input-group">
+							<label for="text">Esto es un campo de tipo texto</label>
+							<input id="text" type="text" placeholder="Pruébame...">
+						</div>
+						<div class="input-group">
+							<label for="password">Esto es un campo de tipo password</label>
+							<input id="password" type="password" placeholder="Pruébame...">
+						</div>
+						<div class="input-group">
+							<label for="number">Esto es un campo de tipo numérico</label>
+							<input id="number" type="number" placeholder="Pruébame...">
+						</div>
+						<div class="input-group">
+							<label for="mail">Esto es un campo de tipo email</label>
+							<input id="mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Pruébame...">
+						</div>
+					</fieldset>
+					<hr>
+					<p>Aqui estamos utilizando las etiquetas <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;option&gt;</code> y algunos atributos.</p>
+					<fieldset>
+						<legend>Esto es un fieldset son "<i>selects</i>"</legend>
+						<div class="input-group">
+							<label for="simple">Esto es un select simple</label>
+							<select name="simple" id="simple">
+								<option value="" disabled selected>Seleccione</option>
+								<option value="1">Opción 1</option>
+								<option value="2">Opción 2</option>
+								<option value="3">Opción 3</option>
+							</select>
+						</div>
+						<div class="input-group">
+							<label for="optgroup">Esto es un select con opciones agrupadas</label>
+							<select name="optgroup" id="optgroup">
+								<option value="" disabled selected>Seleccione</option>
+								<optgroup label="Frutas">
+									<option value="fresas">Fresas</option>
+									<option value="bananas">Bananas</option>
+								</optgroup>
+								<optgroup label="Colores">
+									<option value="rosa">Rosa</option>
+									<option value="amarillo">Amarillo</option>
+								</optgroup>
+							</select>
+						</div>
+					</fieldset>
+					<p>Aqui estamos utilizando la etiqueta <code>&lt;button&gt;</code>.</p>
+					<div class="input-group">
+						<button>Esto es un botón</button>
+					</div>
+				</form>
+				<br>
+				<p>Si quieres replicar este formulario, esta es la forma de hacerlo:</p>
+				<img src="img/fieldset_1.png" alt="Fieldset con inputs">
+				<br>
+				<img src="img/fieldset_2.png" alt="Esto es un fieldset son selects y un button">
+			</div>
+		</section>		
+	</main>
+
+	<!-- Pie de página -->
+	<footer>
+		<p>&copy; FemCoders 2022</p>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script>
+		$(document).on("scroll", onScroll);
+	    function onScroll(event){
+	        var scrollPos = $(document).scrollTop();
+	        $('.opcion-menu').each(function () {
+	            var currLink = $(this);
+	            var refElement = $(currLink.attr("href"));
+	            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	                $('.opcion-menu').parent().removeClass("active");
+	                currLink.parent().addClass("active");
+	            }
+	            else{
+	                currLink.parent().removeClass("active");
+	            }
+	        });
+	    }    
+	</script>
+	<script src="js/main.js"></script>
+</body>
+</html>
